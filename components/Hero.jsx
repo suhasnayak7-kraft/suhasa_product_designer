@@ -129,16 +129,16 @@ export default function Hero() {
   return (
     <section className="hero" ref={rootRef}>
       <div id="canvas-hero" ref={canvasRef} aria-hidden="true" />
-      <span className="hero-jp" aria-hidden="true">デザイン</span>
       <div className="container hero-content">
-        <p className="label hero-label">Sr. Product Designer</p>
+        <p className="label hero-label">AI-First Senior Product Designer · Bengaluru</p>
         <h1 className="hero-name" aria-label="Suhasa Nayak">
           {NAME.split('').map((c, i) =>
             c === '\n' ? <br key={i} /> : <span className="char" key={i} aria-hidden="true">{c}</span>
           )}
         </h1>
         <p className="hero-sub">
-          She does interaction and product design to bring joy — the kind of joy you can measure.
+          Untangling complex enterprise problems into interfaces people can actually use —
+          from raw idea to working prototype, fast.
         </p>
       </div>
       <p className="scroll-hint" aria-hidden="true">Scroll to discover ↓</p>

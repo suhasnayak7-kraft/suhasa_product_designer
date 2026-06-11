@@ -261,6 +261,34 @@ section { padding: var(--section-pad) 0; }
 .about-statement .num { font-family: var(--font-display); color: var(--pink-dark); font-weight: 700; font-size: 14px; }
 .about-statement p { font-size: clamp(16px, 2.2vw, 21px); font-weight: 500; line-height: 1.5; }
 
+.about-subhead {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 64px 0 20px;
+  color: var(--deep-purple);
+}
+.exp-list { list-style: none; max-width: 760px; }
+.exp-row {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1.5px solid rgba(201, 127, 232, 0.35);
+  flex-wrap: wrap;
+}
+.exp-role { font-weight: 600; font-size: 15px; }
+.exp-org { color: var(--pink-dark); font-size: 13px; font-weight: 500; }
+.exp-years { margin-left: auto; font-size: 12px; letter-spacing: 0.06em; opacity: 0.6; }
+.qa-list { display: grid; gap: 24px; max-width: 760px; }
+.qa-item {
+  background: #fff;
+  border: 1.5px solid rgba(201, 127, 232, 0.4);
+  border-radius: var(--radius-card);
+  padding: 22px 24px;
+}
+.qa-q { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 8px; }
+.qa-a { font-size: 14px; line-height: 1.7; }
+
 /* ---- contact ---- */
 .contact { background: var(--deep-purple); text-align: center; }
 .contact-title { font-size: clamp(30px, 5vw, 52px); font-weight: 700; letter-spacing: -0.02em; }

@@ -2,9 +2,9 @@ import './globals.css';
 import Nav from '../components/Nav';
 
 export const metadata = {
-  title: 'Suhasa Nayak — Sr. Product Designer',
+  title: 'Suhasa Nayak — AI-First Senior Product Designer',
   description:
-    'Suhasa Nayak does interaction and product design to bring joy. Portfolio, case studies, and resume.',
+    'Suhasa Nayak untangles complex enterprise problems into interfaces people can actually use. Portfolio, case studies, and resume.',
 };
 
 export default function RootLayout({ children }) {

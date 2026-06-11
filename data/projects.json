@@ -1,63 +1,80 @@
 {
   "projects": [
     {
-      "slug": "checkout-redesign",
+      "slug": "payroll-billing-module",
       "code": "PRJ-0125",
-      "title": "Checkout Flow Redesign",
+      "title": "Payroll & Billing Module",
       "category": "UI Design",
       "year": "2025",
       "thumbnail": "",
-      "tags": ["Product Design", "Research"],
-      "summary": "Rebuilt a leaky checkout into a flow people actually finish.",
+      "tags": ["Enterprise UX", "Design Tokens"],
+      "summary": "Multi-tier approval flows, payrun creation, and tax handling — without the spreadsheet headache.",
       "metrics": [
-        { "value": "+31%", "label": "Completion rate" },
-        { "value": "26%", "label": "Fewer drop-offs" },
-        { "value": "+34", "label": "NPS post-launch" }
+        { "value": "30%", "label": "Faster payrun close" },
+        { "value": ">99%", "label": "Report generation success" }
       ],
-      "role": "Lead Product Designer",
-      "team": "2 designers, 4 engineers, 1 PM",
-      "timeline": "12 weeks",
-      "quote": "I just wanted to pay — why is this so hard?",
-      "body": "## What was broken\nUsers were abandoning checkout at the payment step. Session recordings showed confusion around hidden fees and a form that punished mistakes.\n\n## Research voices\nWe interviewed 14 recent abandoners and shadowed 6 live sessions. The pattern was clear: trust collapsed at the moment costs changed.\n\n## What I changed\nA single-page flow with upfront cost transparency, inline validation that forgives, and a progress system that never lies about how many steps remain.\n\n## Results\nCompletion up 31%, drop-offs down 26%, and an NPS jump of 34 points within two months of launch.\n\n## Learnings\nTransparency beats persuasion. Every dark pattern we removed improved conversion."
+      "role": "Senior UI/UX Designer — CEO's Office",
+      "team": "BlueTree product & engineering leads",
+      "timeline": "2025 — ongoing",
+      "quote": "Closing a payrun used to take days. Now it's a checklist.",
+      "body": "## What was broken\nPayroll teams juggled approvals, compensation reports, and tax handling across disconnected screens and offline spreadsheets. Every payrun close was a fire drill.\n\n## What I changed\nDesigned multi-tier approval flows, payrun creation, compensation reports, and tax handling as one coherent module — built on design tokens so every state, table, and form stays consistent.\n\n## Results\nTargeted 20–30% faster payrun close cycle, with report generation success above 99%.\n\n## Learnings\nIn enterprise UX, trust is the feature. Every ambiguous state you remove buys back hours of double-checking."
     },
     {
-      "slug": "design-system",
+      "slug": "employee-data-management",
       "code": "PRJ-0207",
-      "title": "Retro Pop Design System",
+      "title": "Employee Data Management",
+      "category": "UI Design",
+      "year": "2025",
+      "thumbnail": "",
+      "tags": ["Enterprise UX", "Information Architecture"],
+      "summary": "Profile UX for ~150 configurable fields that doesn't feel like a tax form.",
+      "metrics": [
+        { "value": "20%", "label": "Complexity reduction" },
+        { "value": "20%", "label": "Faster profile completion" }
+      ],
+      "role": "Senior UI/UX Designer — CEO's Office",
+      "team": "BlueTree product & engineering",
+      "timeline": "2025",
+      "quote": "150 fields, and it somehow doesn't feel like 150 fields.",
+      "body": "## What was broken\nEmployee profiles carried ~150 configurable fields with role-based access rules — and the old UX exposed all of it at once.\n\n## What I changed\nA tab-fieldset architecture that groups fields by job-to-be-done, role-based visibility so people only see what they own, and drag-and-drop document handling.\n\n## Results\nRoughly 20% complexity reduction and 15–20% faster profile completion.\n\n## Learnings\nInformation architecture is the design. The visuals only work because the structure underneath makes sense."
+    },
+    {
+      "slug": "beeforce-assistant",
+      "code": "PRJ-0318",
+      "title": "BeeForce Assistant",
+      "category": "Motion",
+      "year": "2025",
+      "thumbnail": "",
+      "tags": ["AI Assistant", "Mobile-First"],
+      "summary": "An AI-powered conversational assistant for contract workers — onboarding, attendance, and payouts in chat.",
+      "metrics": [
+        { "value": "30%", "label": "Targeted adoption" },
+        { "value": "↓", "label": "Support escalations" }
+      ],
+      "role": "Senior UI/UX Designer — CEO's Office",
+      "team": "BlueTree AI & mobile teams",
+      "timeline": "2025 — ongoing",
+      "quote": "I just ask it when I get paid. It tells me.",
+      "body": "## What was broken\nContract workers had no easy way to check onboarding status, attendance, or payouts — every question became a support ticket.\n\n## What I changed\nDesigned a mobile-first conversational assistant that handles onboarding, attendance, and payout queries — with clear AI affordances, graceful fallbacks, and language that meets workers where they are.\n\n## Results\nTargeting 30% adoption with measurably fewer support escalations.\n\n## Learnings\nConversational UI isn't about chat bubbles — it's about designing every way the conversation can go wrong."
+    },
+    {
+      "slug": "bluetree-website",
+      "code": "PRJ-0412",
+      "title": "BlueTree Company Website",
       "category": "Branding",
       "year": "2024",
       "thumbnail": "",
-      "tags": ["Design System", "Branding"],
-      "summary": "A token-driven system with personality — colored shadows and all.",
+      "tags": ["Branding", "Web Design"],
+      "summary": "Conceived, designed, and launched BlueTree's web presence — and keep evolving it.",
       "metrics": [
-        { "value": "60+", "label": "Components" },
-        { "value": "3x", "label": "Faster shipping" },
-        { "value": "1", "label": "Source of truth" }
+        { "value": "0→1", "label": "Concept to launch" },
+        { "value": "∞", "label": "Ongoing redesigns" }
       ],
-      "role": "Design Systems Lead",
-      "team": "3 designers, 2 engineers",
-      "timeline": "6 months",
-      "quote": "Finally, a system that doesn't look like every other system.",
-      "body": "## What was broken\nFive products, five button styles, zero shared language.\n\n## What I changed\nBuilt a token architecture, documented 60+ components with accessibility notes, and shipped Figma libraries wired to code.\n\n## Results\nFeature teams ship UI 3x faster and design reviews dropped from hours to minutes."
-    },
-    {
-      "slug": "motion-reel",
-      "code": "PRJ-0318",
-      "title": "Interaction Motion Reel",
-      "category": "Motion",
-      "year": "2024",
-      "thumbnail": "",
-      "tags": ["Motion", "Prototyping"],
-      "summary": "Micro-interactions that make products feel alive.",
-      "metrics": [
-        { "value": "18", "label": "Shipped interactions" },
-        { "value": "+12%", "label": "Engagement lift" }
-      ],
-      "role": "Interaction Designer",
-      "team": "Solo + eng pairing",
-      "timeline": "Ongoing",
-      "quote": "It feels expensive now.",
-      "body": "## The work\nA collection of shipped micro-interactions: spring-physics toggles, optimistic loading states, and celebratory moments that respect prefers-reduced-motion.\n\n## Results\nMeasured engagement lift of 12% on flows where motion communicates state."
+      "role": "UI/UX Designer",
+      "team": "Solo design, with engineering",
+      "timeline": "2024 — ongoing",
+      "quote": "The website finally looks like the company we're building.",
+      "body": "## The work\nConceived, designed, and launched BlueTree's new company website from scratch — brand direction, layout system, and content structure — and continue to evolve it through ongoing redesigns to keep brand and messaging current.\n\n## Beyond the site\nThe same system extends to exec-level design: pitch decks, investor materials, and customer-facing assets, all kept consistent through documented patterns."
     }
   ]
 }
