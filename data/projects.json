@@ -1,0 +1,63 @@
+{
+  "projects": [
+    {
+      "slug": "checkout-redesign",
+      "code": "PRJ-0125",
+      "title": "Checkout Flow Redesign",
+      "category": "UI Design",
+      "year": "2025",
+      "thumbnail": "",
+      "tags": ["Product Design", "Research"],
+      "summary": "Rebuilt a leaky checkout into a flow people actually finish.",
+      "metrics": [
+        { "value": "+31%", "label": "Completion rate" },
+        { "value": "26%", "label": "Fewer drop-offs" },
+        { "value": "+34", "label": "NPS post-launch" }
+      ],
+      "role": "Lead Product Designer",
+      "team": "2 designers, 4 engineers, 1 PM",
+      "timeline": "12 weeks",
+      "quote": "I just wanted to pay — why is this so hard?",
+      "body": "## What was broken\nUsers were abandoning checkout at the payment step. Session recordings showed confusion around hidden fees and a form that punished mistakes.\n\n## Research voices\nWe interviewed 14 recent abandoners and shadowed 6 live sessions. The pattern was clear: trust collapsed at the moment costs changed.\n\n## What I changed\nA single-page flow with upfront cost transparency, inline validation that forgives, and a progress system that never lies about how many steps remain.\n\n## Results\nCompletion up 31%, drop-offs down 26%, and an NPS jump of 34 points within two months of launch.\n\n## Learnings\nTransparency beats persuasion. Every dark pattern we removed improved conversion."
+    },
+    {
+      "slug": "design-system",
+      "code": "PRJ-0207",
+      "title": "Retro Pop Design System",
+      "category": "Branding",
+      "year": "2024",
+      "thumbnail": "",
+      "tags": ["Design System", "Branding"],
+      "summary": "A token-driven system with personality — colored shadows and all.",
+      "metrics": [
+        { "value": "60+", "label": "Components" },
+        { "value": "3x", "label": "Faster shipping" },
+        { "value": "1", "label": "Source of truth" }
+      ],
+      "role": "Design Systems Lead",
+      "team": "3 designers, 2 engineers",
+      "timeline": "6 months",
+      "quote": "Finally, a system that doesn't look like every other system.",
+      "body": "## What was broken\nFive products, five button styles, zero shared language.\n\n## What I changed\nBuilt a token architecture, documented 60+ components with accessibility notes, and shipped Figma libraries wired to code.\n\n## Results\nFeature teams ship UI 3x faster and design reviews dropped from hours to minutes."
+    },
+    {
+      "slug": "motion-reel",
+      "code": "PRJ-0318",
+      "title": "Interaction Motion Reel",
+      "category": "Motion",
+      "year": "2024",
+      "thumbnail": "",
+      "tags": ["Motion", "Prototyping"],
+      "summary": "Micro-interactions that make products feel alive.",
+      "metrics": [
+        { "value": "18", "label": "Shipped interactions" },
+        { "value": "+12%", "label": "Engagement lift" }
+      ],
+      "role": "Interaction Designer",
+      "team": "Solo + eng pairing",
+      "timeline": "Ongoing",
+      "quote": "It feels expensive now.",
+      "body": "## The work\nA collection of shipped micro-interactions: spring-physics toggles, optimistic loading states, and celebratory moments that respect prefers-reduced-motion.\n\n## Results\nMeasured engagement lift of 12% on flows where motion communicates state."
+    }
+  ]
+}
