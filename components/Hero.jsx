@@ -1,25 +1,37 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import * as THREE from 'three';
 
-const NAME = 'Suhasa\nNayak';
+function Chars({ text }) {
+  return text.split('').map((c, i) => (
+    <span className="char" key={i} aria-hidden="true">{c}</span>
+  ));
+}
 
 export default function Hero() {
   const canvasRef = useRef(null);
   const rootRef = useRef(null);
+  const [copied, setCopied] = useState(false);
+
+  function copyEmail() {
+    navigator.clipboard?.writeText('suhasanayak@gmail.com');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1800);
+  }
 
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* ---- GSAP name entrance + letter wobble ---- */
     let ctx;
     if (!prefersReduced) {
       ctx = gsap.context(() => {
         gsap.from('.hero-name .char', {
-          y: 80, opacity: 0, stagger: 0.04, duration: 0.8, ease: 'power3.out', delay: 0.3,
+          y: 80, opacity: 0, stagger: 0.035, duration: 0.8, ease: 'power3.out', delay: 0.3,
         });
-        gsap.from('.hero-sub, .hero-label', { opacity: 0, y: 20, duration: 0.8, delay: 1 });
+        gsap.from('.hero-statement, .hero-loc, .hero-intro, .hero-ctas', {
+          opacity: 0, y: 20, duration: 0.8, delay: 1, stagger: 0.12,
+        });
       }, rootRef);
 
       rootRef.current.querySelectorAll('.hero-name .char').forEach((char) => {
@@ -32,7 +44,6 @@ export default function Hero() {
       });
     }
 
-    /* ---- Three.js scene ---- */
     if (window.innerWidth < 768 || prefersReduced) return () => ctx?.revert();
 
     const scene = new THREE.Scene();
@@ -43,7 +54,6 @@ export default function Hero() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     canvasRef.current.appendChild(renderer.domElement);
 
-    // floating retro particles — cyan + pink
     const geometry = new THREE.PlaneGeometry(0.08, 0.08);
     const particles = [];
     for (let i = 0; i < 80; i++) {
@@ -60,7 +70,6 @@ export default function Hero() {
       particles.push(mesh);
     }
 
-    // city skyline — wireframe boxes
     const buildings = [
       { w: 0.4, h: 2.0, x: -3.6 }, { w: 0.6, h: 3.2, x: -2.6 }, { w: 0.5, h: 1.8, x: -1.6 },
       { w: 0.3, h: 2.6, x: -0.8 }, { w: 0.55, h: 2.2, x: 0.2 }, { w: 0.45, h: 3.0, x: 1.2 },
@@ -80,7 +89,6 @@ export default function Hero() {
       disposables.push(geo, mat, wire, wireMat);
     });
 
-    // mouse parallax
     const onMove = (e) => {
       const x = (e.clientX / window.innerWidth - 0.5) * 2;
       const y = (e.clientY / window.innerHeight - 0.5) * 2;
@@ -130,18 +138,26 @@ export default function Hero() {
     <section className="hero" ref={rootRef}>
       <div id="canvas-hero" ref={canvasRef} aria-hidden="true" />
       <div className="container hero-content">
-        <p className="label hero-label">AI-First Senior Product Designer · Bengaluru</p>
-        <h1 className="hero-name" aria-label="Suhasa Nayak">
-          {NAME.split('').map((c, i) =>
-            c === '\n' ? <br key={i} /> : <span className="char" key={i} aria-hidden="true">{c}</span>
-          )}
-        </h1>
-        <p className="hero-sub">
-          Untangling complex enterprise problems into interfaces people can actually use —
-          from raw idea to working prototype, fast.
+        <h1 className="visually-hidden">Suhasa Nayak — AI-First Senior Product Designer</h1>
+        <p className="hero-name" aria-hidden="true"><Chars text="SUHASA" /></p>
+        <p className="hero-statement">
+          Designing enterprise experiences that ease, simplify, and delight the working day.
         </p>
+        <p className="hero-name" aria-hidden="true"><Chars text="NAYAK" /></p>
+        <p className="hero-loc label">Bengaluru, IN</p>
+        <p className="hero-intro">
+          I&rsquo;m a designer with a mechanical engineering past. I untangle complex enterprise
+          problems — payroll, approvals, 150-field forms — into interfaces people can actually use,
+          moving from raw idea to working prototype fast with AI tools. I care just as much about
+          impact as I do about craft.
+        </p>
+        <div className="hero-ctas">
+          <a className="btn-primary" href="#work">Case studies</a>
+          <button className="btn-ghost" onClick={copyEmail} aria-live="polite">
+            {copied ? 'Email copied ✓' : 'Copy email'}
+          </button>
+        </div>
       </div>
-      <p className="scroll-hint" aria-hidden="true">Scroll to discover ↓</p>
     </section>
   );
 }

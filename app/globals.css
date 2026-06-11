@@ -131,22 +131,28 @@ section { padding: var(--section-pad) 0; }
   color: #fff;
 }
 .hero-name .char { display: inline-block; white-space: pre; }
-.hero-sub {
-  margin-top: 20px;
-  font-size: clamp(15px, 2vw, 19px);
+.hero-statement {
+  margin: 18px 0 18px clamp(0px, 14vw, 180px);
+  font-size: clamp(15px, 2vw, 20px);
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 480px;
+  font-weight: 500;
+}
+.hero-loc { margin-top: 24px; color: var(--pink); }
+.hero-intro {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.8;
   color: rgba(255, 255, 255, 0.55);
   max-width: 560px;
 }
-.hero-jp {
+.hero-ctas { margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; }
+.visually-hidden {
   position: absolute;
-  right: 4%;
-  top: 18%;
-  font-size: clamp(60px, 10vw, 140px);
-  writing-mode: vertical-rl;
-  color: rgba(0, 196, 204, 0.12);
-  user-select: none;
-  font-weight: 700;
-  z-index: 0;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 .scroll-hint {
   position: absolute;
@@ -253,20 +259,13 @@ section { padding: var(--section-pad) 0; }
 }
 .tag.pink { border-color: var(--pink); color: var(--pink); background: rgba(255, 79, 163, 0.13); }
 
-/* ---- about ---- */
-.about { background: var(--lilac); color: var(--deep-purple); }
-.about .section-title { color: var(--deep-purple); }
-.about-statements { display: grid; gap: 32px; max-width: 760px; }
-.about-statement { display: flex; gap: 20px; align-items: baseline; }
-.about-statement .num { font-family: var(--font-display); color: var(--pink-dark); font-weight: 700; font-size: 14px; }
-.about-statement p { font-size: clamp(16px, 2.2vw, 21px); font-weight: 500; line-height: 1.5; }
-
-.about-subhead {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 64px 0 20px;
-  color: var(--deep-purple);
-}
+/* ---- light sections (experience, Q&A) ---- */
+.exp, .qa { background: var(--lilac); color: var(--deep-purple); }
+.exp .section-title, .qa .section-title { color: var(--deep-purple); }
+.toolkit { background: var(--deep-purple); }
+.toolkit-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 32px; }
+.toolkit-group .label { margin-bottom: 12px; }
+.toolkit-pills { display: flex; flex-wrap: wrap; gap: 8px; }
 .exp-list { list-style: none; max-width: 760px; }
 .exp-row {
   display: flex;

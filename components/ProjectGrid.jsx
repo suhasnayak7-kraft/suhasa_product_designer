@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const CATEGORIES = ['All', 'UI Design', 'Branding', 'Motion', 'Research'];
 
-export default function ProjectGrid({ projects }) {
+export default function ProjectGrid({ projects, sectionNum = '01' }) {
   const [filter, setFilter] = useState('All');
   const ref = useRef(null);
 
@@ -32,8 +32,8 @@ export default function ProjectGrid({ projects }) {
     <section className="work" id="work" ref={ref}>
       <div className="container">
         <div className="section-head">
-          <span className="section-num" aria-hidden="true">01</span>
-          <h2 className="section-title">Selected Work</h2>
+          <span className="section-num" aria-hidden="true">{sectionNum}</span>
+          <h2 className="section-title">Case studies</h2>
         </div>
         <div className="filter-tabs" role="group" aria-label="Filter projects by category">
           {CATEGORIES.map((c) => (
